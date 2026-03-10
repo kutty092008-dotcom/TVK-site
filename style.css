@@ -1,0 +1,180 @@
+:root {
+    --primary-red: #a80000;
+    --gold: #ffcc00;
+    --dark: #1a1a1a;
+    --light: #f8f9fa;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+•	{ margin: 0; padding: 0; box-sizing: border-box; }
+
+Body {
+    Font-family: ‘Inter’, ‘Arima’, sans-serif;
+    Background-color: var(--light);
+    Color: var(--dark);
+    Line-height: 1.7;
+}
+
+.container {
+    Width: 92%;
+    Max-width: 1200px;
+    Margin: auto;
+}
+
+/* Hero Section */
+.hero {
+    Background: linear-gradient(135deg, #8b0000 0%, #a80000 100%);
+    Color: var(--white);
+    Padding: 100px 0;
+    Text-align: center;
+    Border-bottom: 10px solid var(--gold);
+    Position: relative;
+}
+
+.main-title {
+    Font-size: clamp(2.5rem, 6vw, 4rem);
+    Font-weight: 800;
+    Margin-bottom: 10px;
+    Letter-spacing: -1px;
+}
+
+.tagline {
+    Font-size: 1.5rem;
+    Font-weight: 300;
+    Opacity: 0.9;
+}
+
+.divider {
+    Width: 80px;
+    Height: 4px;
+    Background: var(--gold);
+    Margin: 20px auto;
+}
+
+/* Sections Branding */
+.section-heading {
+    Text-align: center;
+    Font-size: 2.2rem;
+    Color: var(--primary-red);
+    Margin-top: 60px;
+    Font-weight: 700;
+}
+
+.sub-heading {
+    Text-align: center;
+    Font-size: 1.1rem;
+    Color: #666;
+    Margin-bottom: 40px;
+    Text-transform: uppercase;
+    Letter-spacing: 2px;
+}
+
+/* Ideology Cards */
+.leader-grid {
+    Display: flex;
+    Flex-wrap: wrap;
+    Justify-content: center;
+    Gap: 20px;
+    Margin-bottom: 60px;
+}
+
+.leader-card {
+    Background: var(--white);
+    Padding: 25px;
+    Border-radius: 15px;
+    Width: 220px;
+    Text-align: center;
+    Border: 1px solid #eee;
+    Transition: 0.3s;
+}
+
+.leader-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+
+.leader-card h3 { font-size: 1.1rem; color: var(--primary-red); margin-bottom: 5px; }
+.leader-card span { font-size: 0.9rem; color: #777; font-weight: 600; }
+
+/* Promises Grid */
+.promises-grid {
+    Display: grid;
+    Grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    Gap: 25px;
+    Margin-bottom: 80px;
+}
+
+.promise-card {
+    Background: var(--white);
+    Padding: 35px 25px;
+    Border-radius: 20px;
+    Position: relative;
+    Box-shadow: var(--shadow);
+    Border-bottom: 4px solid #ddd;
+    Transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.promise-card:hover {
+    Transform: scale(1.03);
+    Border-bottom-color: var(--primary-red);
+}
+
+.promise-card.highlight {
+    Background: #fffdf0;
+    Border-left: 5px solid var(--gold);
+}
+
+.p-num {
+    Position: absolute;
+    Top: 15px;
+    Right: 20px;
+    Font-size: 2.5rem;
+    Font-weight: 900;
+    Color: rgba(0,0,0,0.05);
+}
+
+.promise-card h3 {
+    Color: var(--primary-red);
+    Margin-bottom: 15px;
+    Font-size: 1.3rem;
+    Position: relative;
+}
+
+/* Footer & CTA */
+.footer {
+    Background: var(--dark);
+    Color: var(--white);
+    Padding: 80px 0 40px;
+    Text-align: center;
+}
+
+.cta-button {
+    Display: inline-block;
+    Background: var(--gold);
+    Color: var(--dark);
+    Padding: 18px 40px;
+    Border-radius: 50px;
+    Text-decoration: none;
+    Font-weight: 800;
+    Font-size: 1.2rem;
+    Margin: 30px 0;
+    Transition: 0.3s;
+}
+
+.cta-button:hover {
+    Background: var(--white);
+    Transform: translateY(-3px);
+}
+
+.footer-bottom {
+    Margin-top: 60px;
+    Border-top: 1px solid #333;
+    Padding-top: 20px;
+    Font-size: 0.8rem;
+    Opacity: 0.6;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero { padding: 60px 0; }
+    .promises-grid { grid-template-columns: 1fr; }
+    .leader-card { width: 100%; }
+}
